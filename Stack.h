@@ -11,22 +11,22 @@ using namespace std;
 template <typename T>
 class Stack {
 private:
-	T *array; //указатель на массив
-	int size; //размер стека
-	int top; //верхний элемент стека
+	T *array; //СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РјР°СЃСЃРёРІ
+	int size; //СЂР°Р·РјРµСЂ СЃС‚РµРєР°
+	int top; //РІРµСЂС…РЅРёР№ СЌР»РµРјРµРЅС‚ СЃС‚РµРєР°
 public:
-	Stack() : Stack(5){} //конструктор по умолчанию
+	Stack() : Stack(5){} //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 
-	Stack(int arg_size) { //конструктор с параметрами
+	Stack(int arg_size) { //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
 		if (arg_size > 0) {
 			size = arg_size;
 		} else {
 			size = 5;
 		}
-		array = new T[size+1]; //выделение памяти
-		for (int i = 0; i <= size; ++i) //заполнение нулями
+		array = new T[size+1]; //РІС‹РґРµР»РµРЅРёРµ РїР°РјСЏС‚Рё
+		for (int i = 0; i <= size; ++i) //Р·Р°РїРѕР»РЅРµРЅРёРµ РЅСѓР»СЏРјРё
 			array[i] = 0;
-		top = -1; //индикатор пустого стека
+		top = -1; //РёРЅРґРёРєР°С‚РѕСЂ РїСѓСЃС‚РѕРіРѕ СЃС‚РµРєР°
 	}
 
 	Stack(Stack & arg) {
@@ -37,15 +37,15 @@ public:
 		}
 	}
 
-	void Print() const { //выводим стек
+	void Print() const { //РІС‹РІРѕРґРёРј СЃС‚РµРє
 		for (int i = size-1; i >= 0; --i) {
 			cout << "|\t" << array[i] << "\t|" << endl;
 		}
 	}
 
-	void Push(T arg) { //проталкиваем элементы
+	void Push(T arg) { //РїСЂРѕС‚Р°Р»РєРёРІР°РµРј СЌР»РµРјРµРЅС‚С‹
 		if (top == size-1) {
-			cout << "Stack переполнен!" << endl;
+			cout << "Stack РїРµСЂРµРїРѕР»РЅРµРЅ!" << endl;
 		} else {
 			++top;
 			array[top] = arg;
@@ -53,9 +53,9 @@ public:
 		return;
 	}
 
-	void Pop() { //производим выборку
+	void Pop() { //РїСЂРѕРёР·РІРѕРґРёРј РІС‹Р±РѕСЂРєСѓ
 		if (top == -1) {
-			cout << "Stack пуст!" << endl;
+			cout << "Stack РїСѓСЃС‚!" << endl;
 			return;
 		} else {
 			array[top] = 0;
@@ -63,23 +63,23 @@ public:
 		}
 	}
 
-	T Top() { //возвращаем верхний элемент
+	T Top() { //РІРѕР·РІСЂР°С‰Р°РµРј РІРµСЂС…РЅРёР№ СЌР»РµРјРµРЅС‚
 		if (top == -1) {
-			cout << "Stack пуст!" << endl;
+			cout << "Stack РїСѓСЃС‚!" << endl;
 			return -1;
 		}else {
 			return array[top];
 		}
 	}
 
-	void Clear() { //очищаем стек (полная выборка)
+	void Clear() { //РѕС‡РёС‰Р°РµРј СЃС‚РµРє (РїРѕР»РЅР°СЏ РІС‹Р±РѕСЂРєР°)
 		for (int i = 0; i < size; ++i)
 			array[i] = 0;
 		top = -1;
 		return;
 	}
 
-	bool isEmpty() { //проверяем стек на пустоту
+	bool isEmpty() { //РїСЂРѕРІРµСЂСЏРµРј СЃС‚РµРє РЅР° РїСѓСЃС‚РѕС‚Сѓ
 		if (top ==- 1){
             return true;
         }
@@ -88,7 +88,7 @@ public:
         }
 	}
 
-	int Size() { //возвращает размер стека
+	int Size() { //РІРѕР·РІСЂР°С‰Р°РµС‚ СЂР°Р·РјРµСЂ СЃС‚РµРєР°
 		return size;
 	}
 
@@ -100,7 +100,7 @@ public:
 		return *this;
 	}
 
-	~Stack() { //очищаем память
+	~Stack() { //РѕС‡РёС‰Р°РµРј РїР°РјСЏС‚СЊ
 		delete[]array;
 	}
 };
