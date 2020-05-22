@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1590136490 source:c:\users\leonid\desktop\4lab\main.cpp
+	"Stack.h"
+
+1590136570 c:\users\leonid\desktop\4lab\stack.h
+	<iostream>
+	<string>
+	<conio.h>
+	<windows.h>
+
