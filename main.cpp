@@ -29,11 +29,11 @@ int main() {
 			system("cls");
 			Stack<int> A(_size);
 			if (_size <=0){
-                _size = 5;
-                }
-                else{
-                _size = _size;
-                }
+               			_size = 5;
+               		}
+                	else{
+                		_size = _size;
+                	}
 			cout << "Создан объект Stack(int) размером " << _size << endl;
 			cout << "-------------------------------------------" << endl;
 			cout << "Визуализация стека: " << "\n\n";
@@ -106,11 +106,11 @@ int main() {
 			system("cls");
 			Stack<float> A(_size);
 			if (_size <=0){
-                _size = 5;
-                }
-                else{
-                _size = _size;
-                }
+                		_size = 5;
+                	}
+                	else{
+                		_size = _size;
+                	}
 			cout << "Создан объект Stack<float> размером " << _size  << endl;
 			cout << "-------------------------------------------" << endl;
 			cout << "Визуализация стека: " << "\n\n";
@@ -183,11 +183,11 @@ int main() {
 			system("cls");
 			Stack<char> A(_size);
 			if (_size <=0){
-                _size = 5;
-                }
-                else{
-                _size = _size;
-                }
+                		_size = 5;
+               		}
+               		else{
+                		_size = _size;
+                	}
 			cout << "Создан объект Stack<char> размером " << _size << endl;
 			cout << "-------------------------------------------" << endl;
 			cout << "Визуализация стека: " << "\n\n";
